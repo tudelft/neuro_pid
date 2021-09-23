@@ -1,7 +1,7 @@
 # SpikingPIDRos
 
 These steps assume you have already installed ROS Melodic and sourced your environment on a machine running Linux Ubuntu 18.04 OS.
-If that is not the case, the instructions on https://github.com/ethz-asl/rotors_simulator for installing ROS also work for ROS Melodic, by replacing indigo with melodic.
+If that is not the case, please follow the instructions on http://wiki.ros.org/melodic/Installation/Ubuntu
 It is also expected that a version of Anaconda/Miniconda is installed on the machine.
 
 Steps:
