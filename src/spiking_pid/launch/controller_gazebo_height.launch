@@ -1,0 +1,24 @@
+<launch>
+    <arg name="mav_name" default="hummingbird"/>
+    <arg name="filename" default="log"/>
+    <arg name="waypoint" default="1"/>
+    <node pkg="spiking_pid" name="waypoint_node" type="waypoint_node.py" output="screen">
+        <param name="waypoint" value="$(arg waypoint)"/>
+    </node>
+    <node pkg="spiking_pid" name="spiking_pid" type="gazebo_position_controller.py" output="screen">
+        <param name="orientation" value="+"/>
+        <param name="gains" value="resource/gains_height_only.yaml"/>
+        <param name="precision" value="63"/>
+        <param name="control_range" value="1.25"/>
+        <param name="control_type" value="squared"/>
+        <remap from="/command/torquethrust" to='/$(arg mav_name)/command/torquethrust'/>
+        <remap from="/command/motor_speed" to='/$(arg mav_name)/command/motor_speed'/>
+        <remap from="/odometry" to="/$(arg mav_name)/msf_core/odometry"/>
+    </node>
+    <node name="ros_logger" pkg="ros_logger" type="ros_logger" output="screen" args="$(arg filename)">
+        <param name="filename" type="str" value="$(arg filename)" />
+        <remap from="ground_truth/odometry" to="/$(arg mav_name)/ground_truth/odometry" />
+        <remap from="command/motor_speed" to="/$(arg mav_name)/command/motor_speed" />
+        <remap from="command/torquethrust" to="/$(arg mav_name)/command/torquethrust" />
+    </node>
+</launch>

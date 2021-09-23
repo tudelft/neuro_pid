@@ -1,0 +1,42 @@
+# Normal PID for Gazebo:
+# pitch: 
+#   Kp: 0.2
+#   Ki: 0.01
+#   Kd: 0.07
+# roll:
+#   Kp: 0.2
+#   Ki: 0.01
+#   Kd: 0.07
+pitch: 
+  Kp: 0.2
+  Ki: 0.01
+  Kd: 0.08
+roll:
+  Kp: 0.2
+  Ki: 0.01
+  Kd: 0.08
+yaw: 
+  Kp: 0.005
+  Ki: 0.01
+  Kd: 0.001
+x: 
+  Kp: 0.08
+  Ki: 0.01
+  Kd: 0.01
+y:
+  Kp: 0.08
+  Ki: 0.01
+  Kd: 0.01
+z: 
+  Kp: 0.6
+  Ki: 0.01
+  Kd: 0.6
+# ang_vel_roll:
+#   Kp: 0.08
+#   Ki: 0.001
+#   Kd: 0.01
+# ang_vel_pitch:
+#   Kp: 0.08
+#   Ki: 0.001
+#   Kd: 0.01
+  

@@ -1,0 +1,43 @@
+pitch: 
+  Kp: 0.3
+  Ki: 0.01
+  Kd: 0.06
+roll:
+  Kp: 0.3
+  Ki: 0.01
+  Kd: 0.06
+yaw: 
+  Kp: 0.005
+  Ki: 0.01
+  Kd: 0.001
+x: 
+  Kp: 0.10
+  Ki: 0.01
+  Kd: 0.01
+y:
+  Kp: 0.10
+  Ki: 0.01
+  Kd: 0.01
+
+# no loihi weights, control range: 0.8*np.linspace(1.25, -1.25, spiking_precision)** 3
+z: 
+  Kp: 0.915
+  Ki: 0.4
+  Kd: 2.1
+
+# with loihi weights, control range: np.sign(np.linspace(1.25, -1.25, spiking_precision))*np.linspace(1.25, -1.25, spiking_precision)**2 
+# z: 
+#   Kp: 0.91
+#   Ki: 0.5
+#   Kd: 2.13
+
+# with loihi weights, control range: np.linspace(1.25, -1.25, spiking_precision) precision 63
+z: 
+  Kp: 0.87
+  Ki: 5
+  Kd: 2.4
+
+# z: 
+#   Kp: 1.5
+#   Ki: 0.5
+#   Kd: 1.5
